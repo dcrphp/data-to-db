@@ -1,0 +1,9 @@
+/.idea
+/.vagrant
+/document
+/vendor
+/composer.lock
+env
+u.php
+example/log
+example/config/real.php

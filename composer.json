@@ -1,0 +1,22 @@
+{
+    "name": "dcrphp/data-to-db",
+    "description": "多源数据同步到数据库",
+    "authors": [
+        {
+            "name": "HuanJun Huang"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DcrPHP\\DataToDb\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "dcrphp/config": "1.0.2-alpha1",
+        "dcrphp/log": "1.0.2-alpha5",
+        "guzzlehttp/guzzle": "*",
+        "doctrine/orm": "*"
+    }
+}
