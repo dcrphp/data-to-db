@@ -4,7 +4,7 @@ DcrPHP/DataToDb
 2、支持数据库同步到数据库  
 
 ## 1、安装
-　　composer install dcrphp/data-to-db
+　　composer require dcrphp/data-to-db
 
 ## 3、配置
 　　请看example/config/下的案例
