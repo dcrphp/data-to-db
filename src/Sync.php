@@ -86,23 +86,24 @@ class Sync
             throw new \Exception('获取[' . $this->getConfigPath() . ']配置失败');
         }
 
-        $source = $config['source'];
         $enable = $config['enable'];
         if (!$enable) {
             throw new \Exception('请在[' . $this->getConfigPath() . ']中启用enable');
         }
-        if (empty($source)) {
-            throw new \Exception('请在[' . $this->getConfigPath() . ']中配置source');
+
+        $handler = $config['handler'];
+        if (empty($handler)) {
+            throw new \Exception('请在[' . $this->getConfigPath() . ']中配置handler');
         }
         //先不检测字段
         $result = 1;
         //通用字段
-        if (isset($config['enable']) && isset($config['source_config']) && isset($config['target']) && isset($config['target_table']))
+        if (isset($config['source_config']) && isset($config['target']) && isset($config['target_table']))
         {
             $sourceConfig = $config['source_config'];
-            if ('api' == $source) {
+            if ('api' == $handler) {
                 $result = isset($sourceConfig['url']) && isset($sourceConfig['data_field']) && isset($sourceConfig['request_type']);
-            } elseif ('db' == $source) {
+            } elseif ('db' == $handler) {
                 $result = isset($sourceConfig['driver']);
             }
         }else{
@@ -117,7 +118,7 @@ class Sync
     public function initHandler()
     {
         //得到driver名
-        $handlerName = $this->config['source'];
+        $handlerName = $this->config['handler'];
         $handlerName = "DcrPHP\\DataToDb\\Handler\\" . ucfirst($handlerName);
         //初始化
         $clsHandler = new $handlerName();

@@ -2,7 +2,7 @@
 
 return array(
     'enable'=> 1,
-    'source' => 'db', //类型  支持db和api获取数据
+    'handler' => 'db', //类型  支持db和api获取数据
     'source_config' => array( //配置方式可看target.php
         'driver' => 'pdo_mysql',
         'host' => '',

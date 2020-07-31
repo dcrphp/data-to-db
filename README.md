@@ -9,7 +9,7 @@ DcrPHP/DataToDb 同步多源数据到数据库
 　　请看example/index.php    
     
 ## 5、说明
-　　日志请看public/storage/log目录
+　　如果要实现自己的同步逻辑，请在src/Handler中实现
 
 ## 6、已知问题
 　　1、大量数据的同步要优化

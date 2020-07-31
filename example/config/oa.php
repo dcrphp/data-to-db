@@ -2,7 +2,7 @@
 
 return array(
     'enable'=> 1,
-    'source' => 'api', //类型  支持db和api获取数据
+    'handler' => 'api', //类型  支持db和api获取数据
     'source_config' => array( //配置方式可看target.php
         'url' => '',  //api地址
         'data_field' => '',  //数据列表字段 如data.list或data
