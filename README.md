@@ -1,4 +1,6 @@
-DcrPHP/DataToDb 同步多源数据到数据库
+DcrPHP/DataToDb 同步多源数据到数据库(mysql,sqlite,mssql,oracle等)
+1、支持同步api返回的数据到数据库
+2、支持数据库到数据库
 ## 1、安装
 　　composer install dcrphp/data-to-db
 
