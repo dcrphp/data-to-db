@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace DcrPHP\DataToDb\Handler;
 
 use DcrPHP\DataToDb\Concerns\Sync;
-use Doctrine\ORM\Tools\Setup;
 
 class Db extends Sync
 {
