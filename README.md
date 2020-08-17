@@ -16,7 +16,7 @@ DcrPHP/DataToDb
 　　请看example/index.php    
     
 ## 5、说明
-　　如果要实现自己的同步逻辑，请在src/Handler中实现
+　　如果要实现自己的同步逻辑，请在src/Handler中实现。比如你要添加一个对config中handler=my类型的处理，请在src/Handler添加My的类，实现getDataList就可以
 
 ## 6、已知问题
 　　1、大量数据的同步要优化
