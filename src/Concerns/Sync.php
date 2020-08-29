@@ -26,7 +26,10 @@ abstract class Sync
 
     /**
      * 更新到目标库
-     * @return void
+     * @return bool
+     * @throws \Doctrine\DBAL\ConnectionException
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Doctrine\ORM\ORMException
      */
     public function updateData()
     {
@@ -37,6 +40,12 @@ abstract class Sync
         }
         //开始添加数据
         foreach ($this->finalDataList as $data) {
+            array_walk(
+                $data,
+                function (&$value, $key) {
+                    $value = addslashes($value);
+                }
+            );
             $this->insert($db, $this->config['target_table'], $data);
         }
         $db->commit();
