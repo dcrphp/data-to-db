@@ -43,7 +43,9 @@ abstract class Sync
             array_walk(
                 $data,
                 function (&$value, $key) {
-                    $value = addslashes($value);
+                    if (is_string($value) && $value) {
+                        $value = addslashes($value);
+                    }
                 }
             );
             $this->insert($db, $this->config['target_table'], $data);
