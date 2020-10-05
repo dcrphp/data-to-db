@@ -18,5 +18,8 @@
         "dcrphp/log": "1.0.2-alpha5",
         "guzzlehttp/guzzle": "*",
         "doctrine/orm": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
     }
 }

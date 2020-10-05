@@ -73,7 +73,7 @@ abstract class Sync
         $finalList = array();
         //表字段对应
         $columns = $this->config['columns'];
-        if(! $columns){
+        if (! $columns) {
             $this->finalDataList = $this->sourceDataList;
             //没有配置 不用替换
             return;

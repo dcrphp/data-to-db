@@ -14,6 +14,6 @@ class Db extends Sync
         $configSource = $this->config['source_config'];
 
         //得出结果
-        $this->sourceDataList = $this->getDb($configSource['driver'],$configSource)->query($this->config['source_config']['sql'])->fetchAll();
+        $this->sourceDataList = $this->getDb($configSource['driver'], $configSource)->query($this->config['source_config']['sql'])->fetchAll();
     }
 }

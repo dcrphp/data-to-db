@@ -1,10 +1,8 @@
 <?php
+
 require_once("../vendor/autoload.php");
-
 ini_set('display_errors', 'on');
-
 use DcrPHP\DataToDb\Sync;
-
 //$debug = 1; //记录错误及一般信息 不支持本参数
 $clsSync = new Sync(__DIR__ . DIRECTORY_SEPARATOR . 'config', 'oa.php');
 /*if ($debug) {

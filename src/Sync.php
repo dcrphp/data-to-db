@@ -98,17 +98,16 @@ class Sync
         //先不检测字段
         $result = 1;
         //通用字段
-        if (isset($config['source_config']) && isset($config['target']) && isset($config['target_table']))
-        {
+        if (isset($config['source_config']) && isset($config['target']) && isset($config['target_table'])) {
             $sourceConfig = $config['source_config'];
             if ('api' == $handler) {
                 $result = isset($sourceConfig['url']) && isset($sourceConfig['data_field']) && isset($sourceConfig['request_type']);
             } elseif ('db' == $handler) {
                 $result = isset($sourceConfig['driver']);
             }
-        }else{
-        $result = 0;
-    }
+        } else {
+            $result = 0;
+        }
         if (!$result) {
             throw new \Exception('配置字段有缺失');
         }

@@ -20,13 +20,11 @@ class Api extends Sync
             $configSource['url'],
             array('form_params' => $configSource['request_data'])
         );
-        $dataList = json_decode($res->getBody()->getContents(),true);
+        $dataList = json_decode($res->getBody()->getContents(), true);
         $keyList = explode(',', $configSource['data_field']);
-        foreach($keyList as $key){
+        foreach ($keyList as $key) {
             $dataList = $dataList[$key];
         }
         $this->sourceDataList = $dataList;
     }
-
-
 }
